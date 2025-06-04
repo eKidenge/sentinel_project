@@ -18,7 +18,9 @@ SECRET_KEY = 'django-insecure-@52vaf_wi5uz4vt+x36n8gt9@z32%sjx#igr-4ia&&)n!a2c56
 
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost',
+    '127.0.0.1',
+    'sentinel-project-715v.onrender.com',]
 
 
 # Application definition
