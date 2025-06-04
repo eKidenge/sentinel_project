@@ -7,4 +7,6 @@ Pillow
 requests
 geopandas
 shapely
+gunicorn
+
 
