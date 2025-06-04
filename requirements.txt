@@ -1,0 +1,10 @@
+Django==5.1.7
+loguru
+earthengine-api
+google-api-python-client
+oauth2client
+Pillow
+requests
+geopandas
+shapely
+
