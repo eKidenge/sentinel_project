@@ -1,0 +1,49 @@
+{% extends 'gis/base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Exported Imagery</h2>
+    {% if file_urls %}
+        <ul class="list-group mb-4">
+            <!-- NDVI -->
+            <li class="list-group-item">
+                <strong>NDVI PNG:</strong>
+                <img src="{{ file_urls.ndvi_png }}" alt="NDVI PNG" style="max-width: 200px; display: block; margin-top: 5px;">
+                <br>
+                <a href="{{ file_urls.ndvi_png }}" target="_blank">View NDVI (PNG)</a> |
+                <a href="{{ file_urls.ndvi_tif }}" download>Download NDVI (TIF)</a>
+                <p>The Normalized Difference Vegetation Index (NDVI) measures the amount and vigor of vegetation on the land surface.</p>
+            </li>
+            <!-- NDMI -->
+            <li class="list-group-item">
+                <strong>NDMI PNG:</strong>
+                <img src="{{ file_urls.ndmi_png }}" alt="NDMI PNG" style="max-width: 200px; display: block; margin-top: 5px;">
+                <br>
+                <a href="{{ file_urls.ndmi_png }}" target="_blank">View NDMI (PNG)</a> |
+                <a href="{{ file_urls.ndmi_tif }}" download>Download NDMI (TIF)</a>
+                <p>The Normalized Difference Moisture Index (NDMI) reflects vegetation moisture content and water stress.</p>
+            </li>
+            <!-- NDWI -->
+            <li class="list-group-item">
+                <strong>NDWI PNG:</strong>
+                <img src="{{ file_urls.ndwi_png }}" alt="NDWI PNG" style="max-width: 200px; display: block; margin-top: 5px;">
+                <br>
+                <a href="{{ file_urls.ndwi_png }}" target="_blank">View NDWI (PNG)</a> |
+                <a href="{{ file_urls.ndwi_tif }}" download>Download NDWI (TIF)</a>
+                <p>The Normalized Difference Water Index (NDWI) highlights water features and moisture levels.</p>
+            </li>
+            <!-- RGB -->
+            <li class="list-group-item">
+                <strong>RGB PNG:</strong>
+                <img src="{{ file_urls.rgb_png }}" alt="RGB PNG" style="max-width: 200px; display: block; margin-top: 5px;">
+                <br>
+                <a href="{{ file_urls.rgb_png }}" target="_blank">View RGB (PNG)</a> |
+                <a href="{{ file_urls.rgb_tif }}" download>Download RGB (TIF)</a>
+                <p>The RGB image shows a true-color composite of the area, ideal for visual interpretation.</p>
+            </li>
+        </ul>
+    {% else %}
+        <p>No images found. Please check your date range or ROI.</p>
+    {% endif %}
+    <a href="{% url 'index' %}" class="btn btn-secondary">New Request</a>
+</div>
+{% endblock %}

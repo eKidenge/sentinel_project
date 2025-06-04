@@ -1,0 +1,25 @@
+{
+    "type": "FeatureCollection",
+    "name": "SampleArea_Germany",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Test Polygon in Berlin"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [13.40, 52.50],
+              [13.40, 52.53],
+              [13.43, 52.53],
+              [13.43, 52.50],
+              [13.40, 52.50]
+            ]
+          ]
+        }
+      }
+    ]
+  }
+  

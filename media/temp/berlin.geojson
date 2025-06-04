@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Small Test Area in Berlin"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [13.405, 52.520],
+            [13.405, 52.530],
+            [13.415, 52.530],
+            [13.415, 52.520],
+            [13.405, 52.520]
+          ]
+        ]
+      }
+    }
+  ]
+}

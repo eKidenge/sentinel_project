@@ -1,0 +1,27 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "0",  
+        "properties": {
+          "id": "TEST_AREA",
+          "name": "Berlin Central Test Area",
+          "type": "City"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [13.376, 52.514], 
+              [13.426, 52.514],  
+              [13.426, 52.494],  
+              [13.376, 52.494],  
+              [13.376, 52.514]   
+            ]
+          ]
+        }
+      }
+    ]
+  }
+  

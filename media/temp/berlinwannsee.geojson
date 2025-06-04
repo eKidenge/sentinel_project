@@ -1,0 +1,25 @@
+{
+    "type": "FeatureCollection",
+    "name": "SmallArea_Berlin_Wannsee",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Lake Wannsee + Vegetation"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [13.14, 52.40],
+              [13.14, 52.42],
+              [13.16, 52.42],
+              [13.16, 52.40],
+              [13.14, 52.40]
+            ]
+          ]
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,26 @@
+{
+    "type": "FeatureCollection",
+    "name": "Berlin_Havel_Wannsee_10sqkm",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Berlin 10 sq km"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [13.10, 52.41],
+              [13.10, 52.44],
+              [13.13, 52.44],
+              [13.13, 52.41],
+              [13.10, 52.41]
+            ]
+          ]
+        }
+      }
+    ]
+  }
+  
+  
