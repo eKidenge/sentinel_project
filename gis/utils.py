@@ -2,18 +2,37 @@ import ee
 import geemap
 import datetime
 import os
+import json
 import requests
 from loguru import logger
 
 def initialize_earth_engine():
     """
-    Initialize Earth Engine using a service account and private key file.
+    Initialize Earth Engine using a service account and private key JSON stored in environment variable.
     """
+    # Your service account email
     service_account = 'earth-engine-service-account@my-project-92121-461921.iam.gserviceaccount.com'  # Change to your service account
-    credentials_path = '/home/computer-scientist/Desktop/my-project-92121-461921-b6d0ef5f73e3.json'     # Change to your JSON key path
-    credentials = ee.ServiceAccountCredentials(service_account, credentials_path)
+
+    # Load the private key JSON string from environment variable
+    credentials_json = os.getenv('GOOGLE_EARTH_ENGINE_CREDENTIALS')
+    if not credentials_json:
+        raise Exception("Google Earth Engine credentials not found in environment variable 'GOOGLE_EARTH_ENGINE_CREDENTIALS'")
+
+    # Fix escaped newlines if present
+    credentials_json = credentials_json.replace('\\n', '\n')
+
+    # Parse JSON string into dict
+    credentials_dict = json.loads(credentials_json)
+
+    # Initialize Earth Engine with service account credentials using the JSON string
+    credentials = ee.ServiceAccountCredentials(
+        service_account,
+        key_data=json.dumps(credentials_dict)
+    )
     ee.Initialize(credentials)
-    logger.info("Earth Engine initialized with service account.")
+    logger.info("Earth Engine initialized with service account from environment variable.")
+
+# --- Rest of your code stays unchanged ---
 
 def maskS2clouds(image):
     """
